@@ -5,8 +5,15 @@
 [node name="Stage" type="Node"]
 script = ExtResource("1_kkfyi")
 
-[node name="0" type="Node2D" parent="." groups=["spawn_points"]]
+[node name="spawn0" type="Node2D" parent="." groups=["spawn_points"]]
 position = Vector2(152, 482)
 
-[node name="1" type="Node2D" parent="." groups=["spawn_points"]]
+[node name="spawn1" type="Node2D" parent="." groups=["spawn_points"]]
 position = Vector2(700, 482)
+
+[node name="spawn2" type="Node2D" parent="." groups=["spawn_points"]]
+position = Vector2(456, 349)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://scenes/player/player.tscn")
+spawn_path = NodePath("..")
