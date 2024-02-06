@@ -36,15 +36,14 @@ func host_game():
 
 
 func peer_connected(id: int):
-	print("Player connected " + str(id))
+	print("(I am " + str(multiplayer.get_unique_id()) + ") new peer connected " + str(id))
 
 
 func peer_disconnected(id: int):
-	print("Player disconnected " + str(id))
+	print("(I am " + str(multiplayer.get_unique_id()) + ") peer disconnected " + str(id))
 
 
 func connected_to_server():
-	print("connected to server")
 	send_player_information.rpc_id(1, multiplayer.get_unique_id())
 
 
