@@ -2,7 +2,6 @@ extends CharacterBody2D
 class_name Player
 
 var id: int
-#test
 
 func _enter_tree():
 	id = name.to_int()
